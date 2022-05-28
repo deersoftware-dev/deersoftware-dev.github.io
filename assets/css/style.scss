@@ -1,0 +1,46 @@
+---
+---
+
+@import "deerlin-common";
+
+// DeerSoftware custom color theme
+:root {
+    --background-color: #8710e3;
+    --font-color: #fff;
+    --theme-color: #fff;
+
+    --navbar-theme-color: var(--theme-color);
+    --navbar-title-color: var(--font-color);
+    --navbar-menubtn-color: var(--font-color);
+
+    --footer-font-color: var(--font-color);
+    --footer-theme-color: var(--theme-color);
+    --footer-link-color: var(--link-color);
+    --footer-hover-color: var(--hover-color);
+
+    --link-color: #42c2ff;
+    --hover-color: #0c93c9;
+
+    --noscript-font-color: #BE0000;
+    --noscript-background-color: #fff5a5;
+    --noscript-border-color: #e48900;
+
+    --code-background-color: #222831;
+    --code-font-color: var(--font-color);
+    --code-border-color: #3c4245;
+
+    --blockquote-background-color: #fff;
+    --blockquote-font-color: #524a4e;
+    --blockquote-border-color: #fA4eab;
+
+    --table-background-color: #fe83c6;
+    --table-font-color: var(--font-color);
+    --table-in-border-color: #f10086;
+    --table-out-border-color: var(--table-in-border-color);
+
+    --cell-background-color: #f2f2f2;
+    --cell-font-color: #1b1a17;
+    --cell-border-color: var(--table-in-border-color);
+}
+
+@import "rouge-igorpro";
