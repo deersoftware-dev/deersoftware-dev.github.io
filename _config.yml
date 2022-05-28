@@ -1,0 +1,34 @@
+# Deerlin Theme
+remote_theme: deersoftware-dev/jekyll-deerlin@v1.1.0
+
+# Jekyll Plugins for Deerlin
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-remote-theme
+
+# Jekyll SEO Tag
+title: DeerSoftware
+tagline: Developing a new world.
+description: DeerSoftware is a development group created by Nashira Deer with the aim of universalizing the power of technology.
+
+# Deerlin Navbar
+noscript: Your browser has JavaScript disabled and you may experience issues in the navigation menu because of this. 
+navbar:
+  - name: Home
+    url: /
+  - name: Standards
+    url: /#standards
+  - name: Members
+    url: /#members
+  - name: Contact
+    url: /#contact
+
+# Deerlin Footer
+footer: The favicon used in this website belongs to DeerSoftware. All rights reserved.
+
+# Deerlin SEO Tag
+theme-color: 
+
+# Deerlin Google Analytics
+google-analytics: 
