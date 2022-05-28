@@ -13,8 +13,7 @@ We at DeerSoftware believe that the power of software should be in everyone's ha
 
 To make it easier to maintain and create a standard in our open source projects, we have created some standards that we recommend you read before you start contributing.
 
-Deer Labels (WIP)
-Git Deer (WIP)
+Deer Labels (WIP) // Git Deer (WIP)
 
 # Members
 
