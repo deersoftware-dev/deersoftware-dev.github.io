@@ -13,19 +13,18 @@ We at DeerSoftware believe that the power of software should be in everyone's ha
 
 To make it easier to maintain and create a standard in our open source projects, we have created some standards that we recommend you read before you start contributing.
 
-- Deer Labels (WIP)
-- Git Deer (WIP)
+Deer Labels (WIP)
+Git Deer (WIP)
 
 # Members
 
-- Nashira Deer (CEO)
-  [GitHub](https://github.com/NashiraDeer) - [Patreon](https://www.patreon.com/nashiradeer) - [Twitter](https://twitter.com/NashiraDeer)
+Nashira Deer (CEO) // [GitHub](https://github.com/NashiraDeer) - [Patreon](https://www.patreon.com/nashiradeer) - [Twitter](https://twitter.com/NashiraDeer)
 
 # Contact
 
-- [GitHub - deersoftware-dev](https://github.com/deersoftware-dev)
-- [Twitter - @DeerSoftware](https://twitter.com/DeerSoftware)
-- [Email (Security) - security@deersoftware.dev](mailto:security@deersoftware.dev)
-- [Email (Contact) - contact@deersoftware.dev](mailto:contact@deersoftware.dev)
-- [Email (Support) - support@deersoftware.dev](mailto:support@deersoftware.dev)
+[GitHub - deersoftware-dev](https://github.com/deersoftware-dev)  
+[Twitter - @DeerSoftware](https://twitter.com/DeerSoftware)  
+[Email (Security) - security@deersoftware.dev](mailto:security@deersoftware.dev)  
+[Email (Contact) - contact@deersoftware.dev](mailto:contact@deersoftware.dev)  
+[Email (Support) - support@deersoftware.dev](mailto:support@deersoftware.dev)
 
