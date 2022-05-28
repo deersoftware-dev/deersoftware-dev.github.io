@@ -22,9 +22,13 @@ Nashira Deer (CEO) // [GitHub](https://github.com/NashiraDeer) - [Patreon](https
 
 # Contact
 
-[GitHub - deersoftware-dev](https://github.com/deersoftware-dev)  
-[Twitter - @DeerSoftware](https://twitter.com/DeerSoftware)  
-[Email (Security) - security@deersoftware.dev](mailto:security@deersoftware.dev)  
-[Email (Contact) - contact@deersoftware.dev](mailto:contact@deersoftware.dev)  
+[GitHub - deersoftware-dev](https://github.com/deersoftware-dev)
+
+[Twitter - @DeerSoftware](https://twitter.com/DeerSoftware)
+
+[Email (Security) - security@deersoftware.dev](mailto:security@deersoftware.dev)
+
+[Email (Contact) - contact@deersoftware.dev](mailto:contact@deersoftware.dev)
+
 [Email (Support) - support@deersoftware.dev](mailto:support@deersoftware.dev)
 
