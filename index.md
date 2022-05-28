@@ -19,7 +19,7 @@ To make it easier to maintain and create a standard in our open source projects,
 # Members
 
 - Nashira Deer (CEO)
-  > [GitHub](https://github.com/NashiraDeer) - [Patreon](https://www.patreon.com/nashiradeer) - [Twitter](https://twitter.com/NashiraDeer)
+  [GitHub](https://github.com/NashiraDeer) - [Patreon](https://www.patreon.com/nashiradeer) - [Twitter](https://twitter.com/NashiraDeer)
 
 # Contact
 
