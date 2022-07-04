@@ -13,21 +13,21 @@ We at DeerSoftware believe that the power of software should be in everyone's
 hands, so you can find the source code for most of our projects on our GitHub
 so people can contribute directly.
 
-# Standards
+## Standards
 
 To make it easier to maintain and create a standard in our open source projects,
 we have created some standards that we recommend you read before you start contributing.
 
 Deer Labels (WIP) // Git Deer (WIP)
 
-# Members
+## Members
 
 Nashira Deer (CEO) //
 [GitHub](https://github.com/NashiraDeer) -
 [Patreon](https://www.patreon.com/nashiradeer) -
 [Twitter](https://twitter.com/NashiraDeer)
 
-# Contact
+## Contact
 
 [GitHub - deersoftware-dev](https://github.com/deersoftware-dev)
 
