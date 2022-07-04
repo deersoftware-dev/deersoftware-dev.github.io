@@ -57,12 +57,16 @@ third part. The first part is responsible for defining the size of
 
 #### Third part // Text
 
-| Value | Description |
-| ----- | ----------- |
-| 0001  | Plain Text  |
-| 0010  | HTML        |
-| 0011  | Markdown    |
-| 0100  | LaTex       |
+| Value | Description       |
+| ----- | ----------------- |
+| 0001  | Plain Text        |
+| 0010  | HTML              |
+| 0011  | Markdown          |
+| 0100  | LaTex             |
+| 0101  | ReStructured Text |
+| 0110  | Texinfo           |
+| 0111  | Docbook v4        |
+| 1000  | Docbook v5        |
 
 #### Third part // Image
 
@@ -95,8 +99,28 @@ third part. The first part is responsible for defining the size of
 
 ### Object size
 
+The object size is a variable bit numeric value that depends directly on the first part of the object type, if this number has more than 8 bits (ie 2 bytes) it must be big endian.
+
 ## Counting objects
+
+LHYOS does not prohibit the storage of empty objects, on the contrary, it even uses them as you see in "Videos with audio" and for better control of these objects the implementations of this LHYOS standard need to have two types of object count, the real count that counts objects empty and the virtual or default count, which does not count, the same thing should be in query systems, where real queries should return the object even if empty, while virtual or default queries do not.
 
 ## Videos with audio
 
+In the case of videos with audio, the LHYOS standard defines that every audio object after a video must be interpreted as the audio of that video, unless there is an empty object between them thus separating them.
+
 ## Compressing
+
+When we talk about compression algorithm, we recommend XZ compressions for cases that require a high compression and GZIP for cases that require an excellent compression and decompression speed, but we don't limit LHYOS to these two, you can use the compression algorithm that best fits for its implementation or project.
+
+## Licensing
+
+This document containing the documentation for the implementation of LHYOS has been licensed under the [GPL 3.0 license](https://www.gnu.org/licenses/gpl-3.0.txt) but that does not mean that its implementation must contain that same license, since it only applies to extensions of the LHYOS standard and not the way in which it has been implemented.
+
+## Credits
+
+This standard was developed by [DeerSoftware](https://www.deersoftware.dev/) in partnership with Villa2back.
+
+Developed and written by [Nashira Deer](https://gitlab.com/NashiraDeer).
+
+Reviewed by Pedro A. Costa.
