@@ -11,7 +11,7 @@ objects such as text, images, videos and audios in an orderly and organized way.
 Its name comes from the junction of the initials of human objects and the word
 lys or list in Afrikaans.
 
-## Structuring
+## File root
 
 > [file version] [object list...]
 
@@ -57,11 +57,41 @@ third part. The first part is responsible for defining the size of
 
 #### Third part // Text
 
+| Value | Description |
+| ----- | ----------- |
+| 0001  | Plain Text  |
+| 0010  | HTML        |
+| 0011  | Markdown    |
+| 0100  | LaTex       |
+
 #### Third part // Image
+
+| Value | Description |
+| ----- | ----------- |
+| 0001  | PNG         |
+| 0010  | JPEG        |
+| 0011  | SVG         |
+| 0100  | GIF         |
+| 0101  | WebP        |
 
 #### Third part // Audio
 
+| Value | Description |
+| ----- | ----------- |
+| 0001  | Opus        |
+| 0010  | Vorbis      |
+| 0011  | FLAC        |
+| 0100  | MP3         |
+| 0101  | AAC         |
+
 #### Third part // Video
+
+| Value | Description |
+| ----- | ----------- |
+| 0001  | VP8         |
+| 0010  | VP9         |
+| 0011  | H.264       |
+| 0100  | H.265       |
 
 ### Object size
 
