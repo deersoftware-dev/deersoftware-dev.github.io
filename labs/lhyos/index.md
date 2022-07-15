@@ -11,9 +11,11 @@ objects such as text, images, videos and audios in an orderly and organized way.
 Its name comes from the junction of the initials of human objects and the word
 lys or list in Afrikaans.
 
-## File root
+## Root
 
-> [file version] [object list...]
+The root or base of the file consists of a byte that determines the API version of the file followed by the list of objects, if the file has been formatted using the API standard specified in this document, this byte must have a value of 0x00 (0).
+
+The reason there is this byte specifying the version of the file is backward compatibility, so that the same database can have different versions of the standard, being able to create objects in a more current version, but without having to update the existing ones.
 
 | Name         | Description                                               | Size         |
 | ------------ | --------------------------------------------------------- | ------------ |
@@ -30,13 +32,12 @@ lys or list in Afrikaans.
 | object size    | Size in bytes of "object content".                  | Determined by "object type" |
 | object content | Object content.                                     | Determined by "object size" |
 
-### Object type
+## Specifying the object type
 
-The byte representing the object's type is divided into 3 parts, which are
-2 bits long in the case of the first and second parts and 4 bits in the
-third part. The first part is responsible for defining the size of
-"object size", the second for defining the type group and the third the type.
 
+
+
+### 
 #### First part
 
 | Value | Description             |
