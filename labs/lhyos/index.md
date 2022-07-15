@@ -69,13 +69,14 @@ In the third group, its meaning of its value depends exclusively on the value of
 | Value | Description       |
 | ----- | ----------------- |
 | 0001  | Plain Text        |
-| 0010  | HTML              |
-| 0011  | Markdown          |
-| 0100  | LaTex             |
-| 0101  | ReStructured Text |
-| 0110  | Texinfo           |
-| 0111  | Docbook v4        |
-| 1000  | Docbook v5        |
+| 0010  | Book Header       |
+| 0011  | HTML              |
+| 0100  | Markdown          |
+| 0101  | LaTex             |
+| 0110  | ReStructured Text |
+| 0111  | Texinfo           |
+| 1000  | Docbook v4        |
+| 1001  | Docbook v5        |
 
 #### Image group type
 
@@ -96,6 +97,7 @@ In the third group, its meaning of its value depends exclusively on the value of
 | 0011  | FLAC        |
 | 0100  | MP3         |
 | 0101  | AAC         |
+| 0110  | Speex       |
 
 #### Video group type
 
@@ -105,6 +107,11 @@ In the third group, its meaning of its value depends exclusively on the value of
 | 0010  | VP9         |
 | 0011  | H.264       |
 | 0100  | H.265       |
+| 0101  | Theora      |
+
+## Special Objects
+
+## Subordinate objects
 
 ## Counting objects
 
