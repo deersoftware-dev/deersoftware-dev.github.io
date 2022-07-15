@@ -17,12 +17,16 @@ The root or base of the file consists of a byte that determines the API version 
 
 The reason there is this byte specifying the version of the file is backward compatibility, so that the same database can have different versions of the standard, being able to create objects in a more current version, but without having to update the existing ones.
 
+> [file version] [object list...]
+
 | Name         | Description                                               | Size         |
 | ------------ | --------------------------------------------------------- | ------------ |
 | file version | Version of the standard used for writing the file.        | 1 byte       |
 | object list  | The list of objects following the structure of "Objects". | Undetermined |
 
 ## Objects
+
+The objects are formed by a set of header and body with the exception of some objects, the special objects. The header consists of a byte followed by a group that can be 1, 2, 4 or 8 bytes in size depending on the value of the first byte group quoted above (More information below), this group of assorted bytes is nothing but a integer in big endian format that expresses the size of the body, which would be the content of this object.
 
 > [object type] [object size] [object content]
 
@@ -32,13 +36,13 @@ The reason there is this byte specifying the version of the file is backward com
 | object size    | Size in bytes of "object content".                  | Determined by "object type" |
 | object content | Object content.                                     | Determined by "object size" |
 
-## Specifying the object type
+## Object type
 
+A byte is a set formed by 8 bits and for better use of memory, we decided to divide a byte into 3 groups, having 2, 2 and 4 bits in size respectively, below is the table of values that each group can have and their meanings.
 
+> [first group] [second group] [third group]
 
-
-### 
-#### First part
+### First group
 
 | Value | Description             |
 | ----- | ----------------------- |
@@ -47,7 +51,7 @@ The reason there is this byte specifying the version of the file is backward com
 | 10    | 32-bit number (4 bytes) |
 | 11    | 64-bit number (8 bytes) |
 
-#### Second part
+### Second group
 
 | Value | Description |
 | ----- | ----------- |
@@ -56,7 +60,11 @@ The reason there is this byte specifying the version of the file is backward com
 | 10    | Audio       |
 | 11    | Video       |
 
-#### Third part // Text
+### Third group
+
+In the third group, its meaning of its value depends exclusively on the value of the second group, just as the type of the object size depends on the value of the first group.
+
+#### Text group type
 
 | Value | Description       |
 | ----- | ----------------- |
@@ -69,7 +77,7 @@ The reason there is this byte specifying the version of the file is backward com
 | 0111  | Docbook v4        |
 | 1000  | Docbook v5        |
 
-#### Third part // Image
+#### Image group type
 
 | Value | Description |
 | ----- | ----------- |
@@ -79,7 +87,7 @@ The reason there is this byte specifying the version of the file is backward com
 | 0100  | GIF         |
 | 0101  | WebP        |
 
-#### Third part // Audio
+#### Audio group type
 
 | Value | Description |
 | ----- | ----------- |
@@ -89,7 +97,7 @@ The reason there is this byte specifying the version of the file is backward com
 | 0100  | MP3         |
 | 0101  | AAC         |
 
-#### Third part // Video
+#### Video group type
 
 | Value | Description |
 | ----- | ----------- |
@@ -97,10 +105,6 @@ The reason there is this byte specifying the version of the file is backward com
 | 0010  | VP9         |
 | 0011  | H.264       |
 | 0100  | H.265       |
-
-### Object size
-
-The object size is a variable bit numeric value that depends directly on the first part of the object type, if this number has more than 8 bits (ie 2 bytes) it must be big endian.
 
 ## Counting objects
 
