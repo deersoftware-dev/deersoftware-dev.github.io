@@ -109,23 +109,31 @@ In the third group, its meaning of its value depends exclusively on the value of
 
 ## Special Objects
 
+### Null
+
+### Book Header
+
 ## Subordinate objects
 
-## Counting objects
+### Video -> Audio
 
-LHYOS does not prohibit the storage of empty objects, on the contrary, it even uses them as you see in "Videos with audio" and for better control of these objects the implementations of this LHYOS standard need to have two types of object count, the real count that counts objects empty and the virtual or default count, which does not count, the same thing should be in query systems, where real queries should return the object even if empty, while virtual or default queries do not.
+### Book Header -> Image
 
-## Videos with audio
+### Text -> Image
 
-In the case of videos with audio, the LHYOS standard defines that every audio object after a video must be interpreted as the audio of that video, unless there is an empty object between them thus separating them.
+### Audio -> Image
+
+## Data storage
 
 ## Compressing
 
-When we talk about compression algorithm, we recommend XZ compressions for cases that require a high compression and GZIP for cases that require an excellent compression and decompression speed, but we don't limit LHYOS to these two, you can use the compression algorithm that best fits for its implementation or project.
+When we talk about compression algorithm, we recommend XZ compressions for cases that require a high compression and GZIP for cases that require an excellent compression and decompression speed, but we don't limit Khrya to these two, you can use the compression algorithm that best fits for its implementation or project.
 
 ## Licensing
 
-This document containing the documentation for the implementation of LHYOS has been licensed under the [GPL 3.0 license](https://www.gnu.org/licenses/gpl-3.0.txt) but that does not mean that its implementation must contain that same license, since it only applies to extensions of the LHYOS standard and not the way in which it has been implemented.
+[![CC BY-NC-SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+This document containing the documentation for the implementation of Khrya has been licensed under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) but that does not mean that its implementation must contain that same license, since it only applies to extensions of the Khrya standard and not the way in which it has been implemented.
 
 ## Credits
 
