@@ -3,13 +3,11 @@ layout: default
 canonical_url: https://www.deersoftware.dev/labs/lhyos/
 ---
 
-# DeerSoftware + Villa2back // Lhyos v1
+# DeerSoftware + Villa2back // Khrya v1
 
-Lhyos is a multimedia book standard developed by DeerSoftware in partnership
+Khrya is a multimedia book standard developed by DeerSoftware in partnership
 with Villa2back, it is based on a list-like system whose objective is to store
 objects such as text, images, videos and audios in an orderly and organized way.
-Its name comes from the junction of the initials of human objects and the word
-lys or list in Afrikaans.
 
 ## Root
 
