@@ -1,6 +1,6 @@
 ---
 layout: default
-canonical_url: https://www.deersoftware.dev/labs/lhyos/
+canonical_url: https://www.deersoftware.dev/labs/khrya/
 ---
 
 # DeerSoftware + Villa2back // Khrya v1
@@ -109,21 +109,37 @@ In the third group, its meaning of its value depends exclusively on the value of
 
 ## Special Objects
 
+Special Objects are a specific category of objects as they have special properties that differentiate them from other types of objects, they may not contain an "object size" field or there may not be a "content" field this depends from object to object and below is their list.
+
 ### Null
+
+Null is a special object which has neither "object size", nor "content", its type value will always be 0x00 (0 in decimal or 0000-0000 in binary), its function is to serve as a separator, whether between what would be subordinate objects, separating them or serving to say the end of a Book Header, this object should not be added manually, but added automatically by the implementation in order to perform one of the aforementioned functions.
 
 ### Book Header
 
+Book Header is a special object that defines the beginning of a book, in this object not the field "object size", instead the group that determines the size in bits of "object size", is used to determine the size of two big endian integers that is the content of this object, it serves to determine the width and height of the book's pages, exactly in that order.
+
+The end of a Book Header is established when the first Null object that is not separating two possible subordinate objects is found, it is also possible for the same file to have more than one Book Header, in which case, each Book Header should be interpreted as separate chapters from the same book.
+
 ## Subordinate objects
+
+Subordinate objects is a type of object that consists of, on the same page of a book, containing more than one associated object, below is how this should work in a more specific way, for two or more objects to be subordinate it is necessary that they are inside a chapter (in the case after a Book Header and before its end) at the same time that there is no Null object between the elements that you want to be subordinated, since it serves to prevent this behavior from happening and that the objects become gather.
 
 ### Video -> Audio
 
-### Book Header -> Image
+When an audio comes after a video, it means that this audio is part of the video and should be played along with the video, even if the codecs are not usually found together, like H.264 and Vorbis, and even if the size is different, It is recommended to use the size of the video as a parameter for the end of the page, but it is up to whoever is implementing the API or using the library.
 
 ### Text -> Image
 
+When an image is found after a text, it should be used as the background image for the page, this was created so that book creators can create custom pages with different textures like old paper or parchment.
+
 ### Audio -> Image
 
+When an image is found after an audio, it should be displayed during the entire time the audio is played, this was created so that audiobooks can use images to better contextualize for the listener or avoid that the graphical interfaces are completely empty.
+
 ## Data storage
+
+It can happen that a book wants to include an image in addition to the background image and for that, every object that is not inside a chapter should not be displayed as a page and should be used as data, this means that the pages can request this specific object to be used as an element, implementations are free to create their own request method in a way that is more consistent with their way of reading the object, but we recommend implementing href resolution with values " khrya:n" for the object that is at position "n".
 
 ## Compressing
 
